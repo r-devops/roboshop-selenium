@@ -28,7 +28,7 @@ public class StanRobotShop extends DriverFactory {
 		
 		driver=DriverFactory.getDriver();
 		driver.manage().window().maximize();
-		driver.get("http://54.184.84.34:8080/");
+		driver.get("http://52.36.51.176:8080/");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
