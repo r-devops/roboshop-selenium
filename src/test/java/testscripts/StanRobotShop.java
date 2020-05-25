@@ -33,7 +33,7 @@ public class StanRobotShop extends DriverFactory {
 	}
 	
 	@Test
-	public void CreateAnOrder() {
+	public void CreateAnOrder() throws InterruptedException {
 		
 		if(driver.findElement(By.xpath("//a[text()=\"Stan's Robot Shop\"]")).isDisplayed()) {
 			
@@ -51,9 +51,9 @@ public class StanRobotShop extends DriverFactory {
 			s.selectByValue("in");;
 			
 			driver.findElement(By.id("location")).sendKeys("Hyderabad");
-			
+			thread.sleep(10000);
 			driver.findElement(By.id("location")).sendKeys(Keys.ARROW_DOWN);
-			
+			thread.sleep(10000);
 			driver.findElement(By.id("location")).sendKeys(Keys.ENTER);
 			
 			driver.findElement(By.xpath("//button[.='Calculate']")).click();
